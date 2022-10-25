@@ -1,0 +1,74 @@
+@import "../../App.css";
+
+.sidebar {
+  width: 20%;
+  height: 100vh;
+  background-color: var(--pry-purple);
+}
+
+.sidebar .logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 91px;
+}
+
+.sidebar .logo-container .logo {
+  width: 54px;
+  height: 48px;
+}
+
+.sidebar .sidebar-toggle-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 44px;
+}
+
+.sidebar .sidebar-toggle-container .sidebar-toggle {
+  width: 33px;
+  height: 33px;
+  margin-right: -14.5px;
+}
+
+.sidebar-item-container {
+  display: flex;
+  height: 65px;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 21%;
+  /* border-top: solid 0.5px var(--sec-purple); */
+  border-bottom: solid 0.5px var(--sec-purple);
+}
+
+.sidebar-item-container:first-child {
+  border-top: solid 0.5px var(--sec-purple);
+}
+
+.sidebar-item-container .sidebar-item {
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+  gap: 36px;
+}
+
+.sidebar-item-container .sidebar-item .sidebar-item-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.notification-count-container {
+  margin-right: 9%;
+}
+
+.notification-count-container .notification-count {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--pry-purple);
+  background-color: var(--yellow);
+  border-radius: 5px;
+  padding: 4px 6px;
+}
