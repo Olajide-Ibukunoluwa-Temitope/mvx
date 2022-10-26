@@ -1,0 +1,16 @@
+@import "../../App.css";
+
+.container {
+  width: 100%;
+  display: flex;
+  gap: 29px;
+  padding: 0 43px 43px 31px;
+}
+
+.left-section {
+  width: 27%;
+}
+
+.right-section {
+  width: 73%;
+}

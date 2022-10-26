@@ -5,6 +5,8 @@ import courses from "../../assets/icons/courses.svg";
 import messages from "../../assets/icons/messages.svg";
 import groups from "../../assets/icons/groups.svg";
 import grades from "../../assets/icons/grades.svg";
+import settings from "../../assets/icons/settings.svg";
+import logout from "../../assets/icons/logout.svg";
 
 export const sidebarData = [
   {
@@ -36,5 +38,16 @@ export const sidebarData = [
   {
     title: "Grades",
     icon: grades,
+  },
+];
+
+export const sidebarFooterData = [
+  {
+    title: "Settings",
+    icon: settings,
+  },
+  {
+    title: "Logout",
+    icon: logout,
   },
 ];

@@ -1,0 +1,11 @@
+@import "../../App.css";
+
+.frame {
+  display: flex;
+  width: 100%;
+}
+
+.body {
+  width: 80%;
+  background-color: var(--body-bg);
+}
