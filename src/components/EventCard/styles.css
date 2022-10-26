@@ -1,0 +1,65 @@
+@import "../../App.css";
+
+.event-card {
+  background-color: var(--white);
+  box-shadow: 0px 9.57782px 19.1556px rgba(0, 0, 0, 0.02);
+  border-radius: 15px;
+  padding: 16px 26px 18px 24px;
+  margin-bottom: 10px;
+}
+
+.datetime {
+  color: var(--text-grey);
+  font-family: "Airbnb Cereal App Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 14px;
+  margin-bottom: 12.5px;
+}
+
+.event-title {
+  font-family: "Airbnb Cereal App Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0 0 2px 0;
+  color: var(--text-black);
+}
+
+.event-facilitator {
+  font-family: "Airbnb Cereal App Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 14px;
+  color: var(--text-grey);
+  margin: 0;
+}
+
+.event-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.location {
+  display: flex;
+  gap: 3px;
+  font-family: "Airbnb Cereal App Medium";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 8px;
+  line-height: 10px;
+}
+
+.location p {
+  margin: 0;
+}
+
+.event-type-icon {
+  width: 15px;
+  height: 15px;
+}

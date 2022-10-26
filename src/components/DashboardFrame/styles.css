@@ -6,6 +6,11 @@
 }
 
 .body {
-  width: 80%;
+  width: 82%;
   background-color: var(--body-bg);
+}
+
+.content {
+  height: calc(100vh - 135px);
+  overflow-y: scroll;
 }
