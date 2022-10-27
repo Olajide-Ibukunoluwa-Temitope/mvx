@@ -112,8 +112,79 @@ const Dashboard = () => {
         <div className="container">
           <div className="left-section">
             <div>
+              <div className="mob-tracker tracker">
+                <div className="mob-left-tracker">
+                  <div className="scheduler-opt-item opt-item">
+                    Time tracking
+                  </div>
+                  <div className="scheduler-opt-item time">00:03:22</div>
+                  <div>
+                    <img src={timer_play} alt="" className="mob-timer-play" />
+                  </div>
+                </div>
+                <div className="mob-right-tracker">
+                  <div className="sort-scheduler mob-sort-scheduler">
+                    <span className="label">Sort by:</span>
+                    <SelectField
+                      name="events"
+                      bgColor={"white"}
+                      color="#6C6C6C"
+                      border="0.5px solid #D3D3D3"
+                      placeholder={"Events"}
+                      options={[
+                        { label: "Classes", value: "classes" },
+                        { label: "Reminders", value: "reminders" },
+                      ]}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="scheduler-opt mob-scheduler-opt">
+                <div className="scheduler-opt-item ">Notes</div>
+                <div className="scheduler-opt-item scheduler-opt-item-active">
+                  Timeline
+                </div>
+                <div className="scheduler-opt-item">Planner</div>
+                <div className="scheduler-opt-item">Goals</div>
+              </div>
               <CalendarComp setDate={setDate} date={date} selectRange={true} />
-              <div>
+              <div className="mob-scheduler">
+                <div className="scheduler-heading">
+                  <div className="scheduler">
+                    <div className="scheduler-title">Calendar</div>
+                    <div className="sort-scheduler">
+                      <span className="label">Sort by:</span>
+                      <SelectField
+                        name="events"
+                        bgColor={"white"}
+                        color="#6C6C6C"
+                        border="0.5px solid #D3D3D3"
+                        placeholder={"Events"}
+                        options={[
+                          { label: "Classes", value: "classes" },
+                          { label: "Reminders", value: "reminders" },
+                        ]}
+                      />
+                    </div>
+                  </div>
+                </div>
+                <Scheduler
+                  locale="en"
+                  events={events}
+                  legacyStyle={false}
+                  options={{
+                    transitionMode: "zoom",
+                    startWeekOn: "mon",
+                    defaultMode: "day",
+                  }}
+                  toolbarProps={{
+                    showSearchBar: false,
+                    showSwitchModeButtons: true,
+                    showDatePicker: true,
+                  }}
+                />
+              </div>
+              <div className="mob-event-types-container">
                 <div className="event-header-section">
                   <div>
                     <h3 className="event-heading">Upcoming events</h3>
@@ -134,6 +205,7 @@ const Dashboard = () => {
               </div>
             </div>
           </div>
+
           <div className="right-section">
             <div className="scheduler-opts">
               <div className="scheduler-opt">
@@ -152,40 +224,43 @@ const Dashboard = () => {
                 </div>
               </div>
             </div>
-            <div className="scheduler-heading">
-              <div className="scheduler">
-                <div className="scheduler-title">Calendar</div>
-                <div className="sort-scheduler">
-                  <span className="label">Sort by:</span>
-                  <SelectField
-                    name="events"
-                    bgColor={"white"}
-                    color="#6C6C6C"
-                    border="0.5px solid #D3D3D3"
-                    placeholder={"Events"}
-                    options={[
-                      { label: "Classes", value: "classes" },
-                      { label: "Reminders", value: "reminders" },
-                    ]}
-                  />
+            <div className="desktop-scheduler">
+              <div className="scheduler-heading">
+                <div className="scheduler">
+                  <div className="scheduler-title">Calendar</div>
+                  <div className="sort-scheduler">
+                    <span className="label">Sort by:</span>
+                    <SelectField
+                      name="events"
+                      bgColor={"white"}
+                      color="#6C6C6C"
+                      border="0.5px solid #D3D3D3"
+                      placeholder={"Events"}
+                      options={[
+                        { label: "Classes", value: "classes" },
+                        { label: "Reminders", value: "reminders" },
+                      ]}
+                    />
+                  </div>
                 </div>
               </div>
+
+              <Scheduler
+                locale="en"
+                events={events}
+                legacyStyle={false}
+                options={{
+                  transitionMode: "zoom",
+                  startWeekOn: "mon",
+                  defaultMode: "day",
+                }}
+                toolbarProps={{
+                  showSearchBar: false,
+                  showSwitchModeButtons: true,
+                  showDatePicker: true,
+                }}
+              />
             </div>
-            <Scheduler
-              locale="en"
-              events={events}
-              legacyStyle={false}
-              options={{
-                transitionMode: "zoom",
-                startWeekOn: "mon",
-                defaultMode: "day",
-              }}
-              toolbarProps={{
-                showSearchBar: false,
-                showSwitchModeButtons: true,
-                showDatePicker: true,
-              }}
-            />
           </div>
         </div>
       </DashboardFrame>

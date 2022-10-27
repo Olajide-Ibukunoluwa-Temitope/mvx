@@ -1,7 +1,6 @@
 /* start calendar */
 .react-calendar {
   width: 400px;
-  /* height: 366px; */
   max-width: 100%;
   background-color: var(--white);
   padding: 27px;
@@ -31,9 +30,7 @@
 abbr[title] {
   text-decoration: none;
 }
-/* .react-calendar__month-view__days__day--weekend {
-  color: #d10000;
- } */
+
 .react-calendar__tile:enabled:hover,
 .react-calendar__tile:enabled:focus {
   background: #f8f8fa;
@@ -106,3 +103,9 @@ abbr[title] {
   color: #202020;
 }
 /* end calendar */
+
+@media screen and (max-width: 1000px) {
+  .react-calendar {
+    width: auto;
+  }
+}

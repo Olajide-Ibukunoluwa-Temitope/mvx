@@ -350,10 +350,22 @@
   justify-content: flex-end;
 }
 
+.mob-tracker {
+  display: none;
+}
+
+.mob-scheduler-opt {
+  display: none;
+}
+
+.mob-scheduler {
+  display: none;
+}
+
 @media screen and (max-width: 1000px) {
   .container {
     flex-direction: column;
-    padding: 21px;
+    padding: 21px 21px 89px;
   }
 
   .left-section {
@@ -366,6 +378,7 @@
 
   .scheduler-opts {
     flex-direction: column;
+    display: none;
   }
 
   .scheduler-opt {
@@ -375,6 +388,55 @@
 
   .tracker {
     width: auto;
-    padding: 10px 29px;
+    padding: 10px 19px;
+  }
+
+  .desktop-scheduler {
+    display: none;
+  }
+
+  .mob-tracker {
+    display: flex;
+    gap: 10px;
+  }
+
+  .mob-left-tracker {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+  }
+
+  .mob-left-tracker .scheduler-opt-item {
+    font-size: 12px;
+  }
+
+  .mob-left-tracker .mob-timer-play {
+    width: 21px;
+    height: 21px;
+  }
+
+  .mob-sort-scheduler {
+    gap: 9px;
+    padding-bottom: 0;
+  }
+
+  .mob-sort-scheduler .label {
+    font-size: 10px;
+  }
+
+  .mob-scheduler-opt {
+    display: flex;
+    padding: 10px 19px 0;
+    margin: 9px 0 13px;
+  }
+
+  .mob-scheduler-opt .scheduler-opt-item {
+    padding-bottom: 10px;
+    font-size: 12px;
+  }
+  .mob-scheduler {
+    display: block;
+    margin-top: 15px;
   }
 }
