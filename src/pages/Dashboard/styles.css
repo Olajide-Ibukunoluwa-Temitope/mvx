@@ -349,3 +349,32 @@
   display: flex;
   justify-content: flex-end;
 }
+
+@media screen and (max-width: 1000px) {
+  .container {
+    flex-direction: column;
+    padding: 21px;
+  }
+
+  .left-section {
+    width: 100%;
+  }
+
+  .right-section {
+    width: 100%;
+  }
+
+  .scheduler-opts {
+    flex-direction: column;
+  }
+
+  .scheduler-opt {
+    width: auto;
+    padding: 16px 37px 0;
+  }
+
+  .tracker {
+    width: auto;
+    padding: 10px 29px;
+  }
+}

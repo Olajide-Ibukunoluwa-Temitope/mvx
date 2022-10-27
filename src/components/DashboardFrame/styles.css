@@ -14,3 +14,9 @@
   height: calc(100vh - 135px);
   overflow-y: scroll;
 }
+
+@media screen and (max-width: 1000px) {
+  .body {
+    width: 100%;
+  }
+}

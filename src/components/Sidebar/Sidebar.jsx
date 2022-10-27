@@ -6,10 +6,15 @@ import { sidebarData, sidebarFooterData } from "./data";
 
 const Sidebar = () => {
   const displaySidebarLink = () => {
-    return sidebarData.map((item) => {
+    return sidebarData.map((item, idx) => {
       return (
-        <div key={item.title} className="sidebar-item-container">
-          <div className="sidebar-item">
+        <div
+          key={item.title}
+          className={`sidebar-item-container  ${
+            idx === 0 && "sidebar-item-container-active"
+          }`}
+        >
+          <div className="sidebar-item ">
             <img
               src={item.icon}
               alt="dashboard icon"
