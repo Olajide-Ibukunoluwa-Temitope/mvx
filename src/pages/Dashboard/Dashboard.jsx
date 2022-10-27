@@ -2,11 +2,10 @@ import React, { useState } from "react";
 import CalendarComp from "../../components/Calendar/Calendar";
 import DashboardFrame from "../../components/DashboardFrame/DashboardFrame";
 import add_square from "../../assets/icons/add_square.svg";
-import close_icon from "../../assets/icons/close_icon.svg";
-import tooltip from "../../assets/icons/tooltip.svg";
-import "./styles.css";
 import { eventCardData, eventTypes } from "./data";
 import EventCard from "../../components/EventCard/EventCard";
+import ModalContent from "../../components/ModalContent/ModalContent";
+import "./styles.css";
 
 const Dashboard = () => {
   const [date, setDate] = useState([
@@ -89,45 +88,7 @@ const Dashboard = () => {
       <div style={{ display: open ? "block" : "none" }}>
         <div className="modal-overlay" onClick={handleCloseModal}></div>
         <div className="modal">
-          <div className="header-section">
-            <div className="close-icon-section">
-              <img
-                src={close_icon}
-                alt="close modal"
-                onClick={handleCloseModal}
-              />
-            </div>
-            <div className="modal-title">Add New Events</div>
-          </div>
-          <div className="modal-body">
-            <div className="modal-content-card">
-              <div className="form-left">
-                <div className="form-type-container">
-                  <div className="form-type">
-                    <span>Events</span>
-                  </div>
-                  <div className="form-type form-type-inactive">
-                    <span>Class</span>
-                  </div>
-                  <div className="form-type form-type-inactive">
-                    <span>Task</span>
-                  </div>
-                </div>
-                <div>
-                  <div className="text-field">
-                    <div>
-                      <label htmlFor="title" className="label">
-                        <span>Title</span>
-                        <img src={tooltip} alt="tool tip" />
-                      </label>
-                    </div>
-                    <input type="text" name="title" className="text-input" />
-                  </div>
-                </div>
-              </div>
-              <div className="form-right"></div>
-            </div>
-          </div>
+          <ModalContent handleCloseModal={handleCloseModal} />
         </div>
       </div>
     </>

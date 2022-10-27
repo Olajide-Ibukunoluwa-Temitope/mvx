@@ -4,7 +4,14 @@ import "react-calendar/dist/Calendar.css";
 import "./styles.css";
 
 const CalendarComp = ({ setDate, date, selectRange }) => {
-  return <Calendar onChange={setDate} value={date} selectRange={selectRange} />;
+  return (
+    <Calendar
+      calendarType="US"
+      onChange={setDate}
+      value={date}
+      selectRange={selectRange}
+    />
+  );
 };
 
 export default CalendarComp;

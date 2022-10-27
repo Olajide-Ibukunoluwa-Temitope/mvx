@@ -1,0 +1,29 @@
+@import "../../App.css";
+
+.custom-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.select-input {
+  height: 32px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: "Airbnb Cereal App Medium";
+  font-size: 12px;
+  color: var(--grey-alt-text);
+  background: var(--body-bg);
+  border: none;
+  border-radius: 5px;
+  padding: 8px 11px;
+  line-height: 16px;
+  background-image: url("../../assets/icons/dropdown.svg");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem top 50%;
+  background-size: 0.65rem auto;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
